@@ -11,7 +11,7 @@ interface ApiInterface {// Android arsenal/volley for libraries//creating functi
     fun getPosts(): Call<List<Post>>
 
     @GET("/posts/{postId}")
-    fun getPostById(@Path("postId")postId: Int)
+    fun getPostById(@Path("postId")postId: Int):Call<Post>
 
 //Retrofit is a library that allows our app to send this instructions via http
 }

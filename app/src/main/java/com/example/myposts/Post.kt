@@ -17,9 +17,9 @@ data class  Comment(
     var Body:String
 )
 
-fun returnBiggerObject(post1: Post,post2:Post):Post{
-//    return post.javaClass.name
-    return post2
-
-}
+//fun returnBiggerObject(post1: Post,post2:Post):Post{
+////    return post.javaClass.name
+//    return post2
+//
+//}
 
