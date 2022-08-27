@@ -13,8 +13,8 @@ data class  Comment(
     var postId:Int,
     var id:Int,
     var name:String,
-    var Email:String,
-    var Body:String
+    var email:String,
+    var body:String
 )
 
 //fun returnBiggerObject(post1: Post,post2:Post):Post{
