@@ -9,7 +9,7 @@ data class Post(
     var body:String
 )
 
-data class  Comment(
+data class Comment(
     var postId:Int,
     var id:Int,
     var name:String,
@@ -17,9 +17,9 @@ data class  Comment(
     var body:String
 )
 
-//fun returnBiggerObject(post1: Post,post2:Post):Post{
-////    return post.javaClass.name
-//    return post2
-//
-//}
+fun returnBiggerObject(post1: Post,post2:Post):Post{
+//    return post.javaClass.name
+    return post2
+
+}
 

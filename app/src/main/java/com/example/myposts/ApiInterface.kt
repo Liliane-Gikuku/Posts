@@ -13,5 +13,8 @@ interface ApiInterface {// Android arsenal/volley for libraries//creating functi
     @GET("/posts/{postId}")
     fun getPostById(@Path("postId")postId: Int):Call<Post>
 
+    @GET("/posts/{postId/comments}")
+    fun getComments(@Path("postId")commentsId: Int): Call<List<Comment>>
+
 //Retrofit is a library that allows our app to send this instructions via http
 }

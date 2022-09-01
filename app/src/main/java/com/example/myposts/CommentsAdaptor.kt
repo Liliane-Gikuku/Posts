@@ -6,27 +6,29 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myposts.databinding.PostsListItemsBinding
 
-class CommentsAdaptor (var commentList:List<Post>):
-    RecyclerView.Adapter<CommentViewHolder>(){
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommentViewHolder {
-        var binding= PostsListItemsBinding
-            .inflate(LayoutInflater.from(parent.context),parent,false)
+class CommentsAdaptor(var commentList: List<Comment>?):
+    RecyclerView.Adapter<RetrofitViewsHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RetrofitViewsHolder {
+        var binding = PostsListItemsBinding
+            .inflate(LayoutInflater.from(parent.context), parent, false)
 //        var CommentViewHolder=CommentViewHolder(binding)
-        return CommentViewHolder(binding)
+        return RetrofitViewsHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: CommentViewHolder, position: Int) {
-        var currentComment=commentList.get(position)
-        holder.binding.tvTitle.text=currentComment.title.toString()
-        holder.binding.tvBody.text=currentComment.body.toString()
+    override fun onBindViewHolder(holder: RetrofitViewsHolder, position: Int) {
+        var currentComment = commentList!!.get(position)
+        holder.binding.tvTitle.text = currentComment.postId.toString()
+        holder.binding.tvBody.text = currentComment.body.toString()
     }
+
+
 
     override fun getItemCount(): Int {
-        return commentList.size
+        return commentList!!.size
     }
 }
 
-class  CommentViewHolder(val binding: PostsListItemsBinding):
+class  RetrofitViewsHolder(val binding: PostsListItemsBinding):
     RecyclerView.ViewHolder(binding.root)
 
 
